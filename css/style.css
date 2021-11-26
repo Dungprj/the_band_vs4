@@ -1,0 +1,623 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*common
+
+
+1.vị trí
+2.kích thước
+3.màu sắc*/
+html{
+    scroll-behavior: smooth !important;
+    font-family: Arial, Helvetica, sans-serif;
+    /* background-color:white; */
+}
+
+/* common */
+
+
+.row{
+    margin-left: -8px;
+    margin-right: -8px;
+
+
+}
+.mt8{
+    margin-top: 8px !important;
+}
+.mt16{
+    margin-top: 16px;
+}
+.mt32{
+    margin-top: 32px !important;
+}
+.row::after {
+    display:block;
+    content:"";
+    clear:both;
+}
+
+.col{
+    float:left;
+    padding:0 8px;
+}
+.col-third{
+    width:calc(100%/3);
+}
+.col-half{
+    width:50%;
+
+}
+.col-full{
+    width:100%;
+}
+.text-center{
+    text-align: center !important;
+
+}
+
+
+.clear{
+    clear:both;
+}
+.text-white{
+    color: white;
+}
+
+  
+/* #main{
+
+} */
+
+#header{
+    height: 46px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    /* overflow:hidden; */
+    
+    /* position:fixed; */
+
+
+}
+/* #header{
+    position:fixed;
+} */
+
+#nav >li >a{
+    color:#fff;
+    text-decoration: none;
+    text-transform: uppercase;
+
+}
+
+#nav > li{ 
+
+    display: inline-block;
+    
+}
+#nav li a{
+   
+    /* color: rgb(97, 194, 18); */
+    /* line-height là chiêu cao tính từ 2 lề (trên -dưới) xuống phần content */
+    line-height:46px ;
+    padding:14px;
+    /* display:inline-block; */
+    
+
+}
+#header #nav{
+    display:inline-block;
+
+}
+#nav .nav-arrow-down{
+    font-size: 14px;
+
+}
+#nav, .subnav {
+    list-style-type:none;
+}
+#nav .subnav li:hover ul{
+    display: block;
+    
+}
+#nav >li:hover >a,
+#nav .subnav li:hover{
+    background-color: #a0a0a0;
+    color: black;
+
+}
+/* // thẻ a là thẻ inline không xét được chiều cao và rộng muốn xét thì phải cho nó ăn theo kích thước thẻ bao bọc nó bằng display : inline-block */
+
+
+#nav li{
+    position: relative;
+   
+
+}
+
+#nav .subnav {
+    display:none;
+    /* padding-right: 20px; */
+    background-color:#fff;
+    position:absolute;
+    top: 100%;
+    
+
+
+}
+#nav li:hover .subnav {
+    display:block;
+
+}
+#nav .subnav >li {
+   min-width: 180px;
+    height: 40px;
+    
+}
+#nav > .subnav > li{
+    padding-right: 50px;
+}
+#nav .subnav a{
+    /* width: 100%; */
+    color: #fff;
+    text-decoration: none;
+    line-height:46px;
+    padding:0 5px;
+    /* padding:0 24px; */
+    /* display:block; */
+    
+}
+#nav .subnav{
+    box-shadow: 0px 0px 8px 1px #888888;
+}
+
+/* #nav >.subnav > a{
+    /* display */
+/* #nav > .subnav > li{
+    position:absolute;
+    left: -20px;
+
+}
+ */
+
+#header{
+    z-index: 99 !important;
+}
+#header .mobile-menu-bt,
+#header .search-btn {
+    color:#fff;
+    float: right;
+    padding:0 21px;
+
+    
+   
+    
+    
+    
+    
+}
+#header .search-btn:hover{
+    background-color:red;
+    cursor: pointer;
+
+
+
+}
+#header .mobile-menu-bt:hover{
+    background-color:#cccccc;
+    cursor: pointer;
+    color:#000;
+
+
+}
+/* #header .mobile-menu-bt:hover .mobile-icon{
+
+} */
+
+#header .menu-icon,
+#header .search-icon{
+    line-height: 46px;
+    font-size: 20px;
+    
+}
+#header .menu-icon{
+    display:none;
+}
+
+
+#slider{
+    margin-top: 46px;
+    padding-top:50% ;
+    background-image: url("../img/slider/slider1.jpg");
+    background-position: top;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -5;
+
+
+
+}
+#slider .text-content{
+    position: absolute;
+    width:100%;
+    bottom: 47px;
+    color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+
+
+}
+#slider .text-heading{
+    font-weight: 500;
+    font-size: 24px;
+
+}
+#slider .text-decription{
+    font-size: 15px;
+    margin-top: 20px;
+
+
+}
+/* #content{
+
+} */
+#content .content-section{
+    width: 800px;
+    /* max-width: 100%; */
+    margin-left: auto;
+    margin-right: auto;
+    padding:64px 0px;
+
+}
+
+#content .section-heading{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 4px;
+
+}
+#content .section-sub-heading{
+    text-align: center;
+    font-size: 16px;
+    margin-top: 25px;
+    /* //font-style: italic; làm chữ nghiêng */
+    font-style: italic;
+    opacity: 0.6;
+    margin-bottom: 48px;
+}
+#content .about-text{
+    font-size: 16px;
+    margin-top: 25px;
+    /* //text-align: justify; để hai đầu văn bản bằng nhau */
+    
+    text-align: justify;
+    line-height: 1.4;
+
+}
+#content .member-list{
+    margin-top: 48px;
+    padding:32px 0;
+
+    /* overflow: hidden; */
+}
+
+#content .member-name{
+    font-size: 15px;
+    
+}
+#content .member-img{
+    margin-top: 15px;
+    width:154px;
+    border-radius: 5px;
+
+}
+.tour-section{
+    background:black;
+}
+.tickets-list{
+    background:#fff;
+    margin-top:40px ;
+    list-style: none;
+}
+
+.tickets-list li{
+    font-size: 15px;
+    padding:11px 16px;
+    border:1px solid #ddd;
+    color:#757575;
+
+    
+}
+
+.tickets-list .quantity{
+    float: right;
+    background: #000;
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+    line-height: 19px;
+    margin-top: -2px;
+}
+
+
+.tickets-list .sold-out{
+    background: #f44336;
+    color: white;
+    padding: 6px 8px;
+    margin-left:18px ;
+    
+
+
+
+}
+/* **Place */
+
+.places-list{
+    margin-top: 16px;
+    margin-bottom: 48px;
+    overflow: hidden;
+    
+
+    
+}
+
+.place-img{
+    width:100%;
+    display:block;
+    
+}
+.place-img:hover{
+    opacity:0.6;
+}
+.place-body{
+    background:#fff;
+    padding: 16px;
+    font-size: 15px;
+    
+}
+.place-heading{
+    font-weight: 15px;
+    
+}
+.place-time{
+    margin-top: 15px;
+    color: #757575;
+}
+.place-desc{
+    margin-top: 15px;
+    line-height: 1.4;
+}
+.btn{
+    color: #fff;
+    background-color: #000;
+    padding: 11px 16px;
+    text-decoration: none;
+    display:inline-block;
+    margin-top: 15px;
+    border:none;
+    
+}
+.btn:hover{
+    color:#000;
+    background-color: #ccc;
+
+}
+/* #footer{
+
+} */
+
+
+.modal {
+    position:fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 1;
+}
+.open{
+    display:flex;
+
+}
+
+.modal-container{
+    background:#fff;
+    width:900px;
+    min-height: 200px;
+    position: relative;
+    padding-bottom:16px ;
+    max-width: calc(100%-32px);
+    animation: modalFadeIn ease 0.8s;
+}
+
+.modal-header{
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #009688;
+    font-size: 30px;
+    color: #fff;
+}
+
+.modal-header > i{
+    margin-right: 16px;
+}
+.close-modal{
+    position:absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+}
+
+.close-modal:hover{
+    cursor:pointer;
+    background-color: #f44336;
+
+}
+.modal .modal-body{
+    margin-left: 16px;
+    margin-right: 16px;
+}
+.modal .modal-label{
+    display:block;
+    font-size: 15px;
+    margin-bottom: 12px;
+    
+}
+
+.modal-input{
+    border:1px solid #ccc;
+    width:100%;
+    font-size: 16px;
+    padding:10px;
+    margin-bottom: 24px;
+
+}
+#buy-tickets{
+    border: none;
+    color: #fff;
+    background: #009688;
+    width: 100%;
+    padding: 16px;
+    font-size: 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#buy-tickets:hover{
+    opacity: 0.9;
+}
+
+.modal-footer{
+    padding: 16px;
+    text-align: right;
+   
+}
+.modal-footer >a{
+    color:#2196F3;
+    
+}
+/* **contact-form** */
+.contact-content{
+    margin-bottom: 48px;
+}
+.contact-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i{
+    width:30px;
+    display:inline-block;
+}
+    
+.contact-form{
+    font-size: 15px;
+}
+
+.contact-form .form-control{
+    padding: 10px;
+    border: 1px
+    solid #ccc;
+    width: 100%;
+
+}
+
+.contact-form .form-submit-btn{
+    background: #000;
+    color: #fff;
+    padding: 4px 18px;
+    border: 1px solid #000;
+    padding: 10px 16px;
+    float: right;
+}
+.pull-right{
+    float:right !important;
+}
+
+/* **Map section */
+.map-section img{
+    width:100%;
+
+}
+#footer{
+    padding: 64px 16px;
+    text-align: center  ;
+}
+#footer .socials-list{
+    font-size: 30px;
+}
+#footer.copyright{
+    font-size: 15px;
+} 
+#footer .socials-list a{
+    color:rgba(0, 0, 0, 0.6);
+    text-decoration:none;
+}
+#footer .copyright a:hover,
+#footer .socials-list a:hover{
+    opacity: 0.4;
+}
+#footer .copyright {
+    margin:15px 0;
+    color:rgba(0, 0, 0, 0.6);
+    text-decoration:none;
+}
+#footer .copyright a{
+    color:rgba(0, 0, 0, 0.6);
+
+}
+#footer .copyright{
+    text-decoration: none;
+}
+/* ################################################responsive  */
+
+/* @media (min-width :740px) {
+    
+} */
+/* ##pc */
+/* @media (min-width:1024px) {
+    
+} */
+/* @media (max-width :740px) {
+    
+} */
+
+
+
+
+/* ##########end responsive */
+/* ############### hoạt ảnh */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+        
+
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+
+
+    }
+}

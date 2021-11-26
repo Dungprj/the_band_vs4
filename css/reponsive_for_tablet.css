@@ -1,0 +1,43 @@
+/* #tablet and mobile */
+@media only screen and (max-width: 63.9375em){
+    
+    .btn{
+        padding:15px 16px;
+    }
+    .contact-form .form-control{
+        padding: 15px;
+    }
+    .socials-list{
+        font-size: 48px;
+    }
+    #footer .socials-list a{
+        margin: 0 8px;
+    }
+    #footer .copyright a{
+        padding: 10px 0;
+        display:inline-block;
+    }
+    .contact-info{
+        line-height: 2;
+    }
+    .contact-submit-btn{
+        font-size:  16px;
+    }
+
+    
+
+
+}
+/* ##tablet */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    #content .content-section{
+        padding:64px 16px;
+    
+    }
+    #content .content-section{
+        max-width: 100%;
+    }
+    
+    
+
+}
